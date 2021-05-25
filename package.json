@@ -1,0 +1,22 @@
+{
+  "name": "learning",
+  "version": "1.0.0",
+  "description": "Learning project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergeyice/learning.git"
+  },
+  "keywords": [
+    "learning"
+  ],
+  "author": "Sergey Ice",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergeyice/learning/issues"
+  },
+  "homepage": "https://github.com/sergeyice/learning#readme"
+}
