@@ -1,18 +1,33 @@
-let http = require('http');
+// библиотеки
 
-let port = 80;
+let express = require('express');
 
-let server = http.createServer((req, res) => {
+// конфигурационные файлы
 
-    console.log(req.url);
+let config = require('./config.json');
 
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
+// приложение
 
-    res.end(req.url === '/' ? 'Hello World!' : 'WAT?');
+let app = express();
+
+// обработка запросов
+
+app.get('/', (req, res) => {
+
+	res.send('Hello Sergey!');
 
 });
 
-server.listen(port, () => {
-  console.log('Сервер работает по адресу: http://localhost:' + port);
+app.get('/secret', (req, res) => {
+
+	res.send('^_^');
+
+});
+
+// запуск прослушивания порта для HTTP сервера
+
+app.listen(config.port, () => {
+
+	console.log('http://localhost:' + config.port);
+
 });
