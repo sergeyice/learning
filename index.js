@@ -24,6 +24,12 @@ app.get('/secret', (req, res) => {
 
 });
 
+app.get('/config', (req, res) => {
+
+	res.send(config);
+
+});
+
 // запуск прослушивания порта для HTTP сервера
 
 app.listen(config.port, () => {
